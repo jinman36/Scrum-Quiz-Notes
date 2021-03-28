@@ -34,7 +34,7 @@ body {
 }
 
 .incorrect {
-  background: linear-gradient(32deg, rgb(168, 15, 15) 0%, rgb(226, 19, 19)) 100%);
+  background: linear-gradient(32deg, rgb(224, 14, 14) 0%, rgb(212, 4, 4) 100%);
 }
 
 /* Heads Up display */
@@ -62,8 +62,8 @@ body {
 
 #progressBarFull {
   height: 100%;
-  background: rgb(41, 232, 111)
   width: 0%;
+  background: rgb(41, 232, 111)
 }
 
 @media screen and (max-width: 768px) {
