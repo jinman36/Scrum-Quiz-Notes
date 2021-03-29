@@ -2,6 +2,7 @@
 
 ## Reference sites for Scrum Material
 1. [Scrum Training Series](https://scrumtrainingseries.com/)
+Agile Project Management with Scrum(Schwabber 2004)
 
 ## Site/Code Resources
 1. [CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
