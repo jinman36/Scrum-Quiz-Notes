@@ -276,6 +276,14 @@ let questions = [
     answer: 2,
   },
   {
+    question: 'Test Driven Development (TDD) involves creating tests and code nearly simultaneously, while constantly improving the design. Many Agile developers believe TDD helps ensure correct implementation while reducing the cost of change. Is TDD part of Scrum?',
+    choice1: 'No, Scrum is only a feedback framework. It does not specify particular technical practices',
+    choice2: 'Yes, Scrum is a complete methodology containing everything you need to succeed',
+    choice3: '',
+    choice4: '',
+    answer: 1,
+  },
+  {
     question: 'In Scrum, what does a Team attempt to do during its very first Sprint?',
     choice1: 'Analyze, design, build, integrate, and test a potentially shippable product increment, even if its features are initially simple and small',
     choice2: 'Analyze requirements only',
