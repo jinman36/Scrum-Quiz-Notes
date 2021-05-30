@@ -9,6 +9,8 @@ let acceptingAnswers = true;
 let score = 0;
 let questionsCounter = 0;
 let availableQuestions = [];
+const SCORE_POINTS = 100
+const MAX_QUESTIONS = 25
 
 let questions = [
   {
@@ -23,7 +25,7 @@ let questions = [
     question: 'When is Sprint execution completed?',
     choice1: 'It depends',
     choice2: 'When all planned Product Backlog Items meet their definition of "done"',
-    choice3: 'When the timebox expires',
+    choice3: 'When the time box expires',
     choice4: 'When all tasks are complete',
     answer: 3,
   },
@@ -84,7 +86,7 @@ let questions = [
     answer: 1,
   },
   {
-    question: 'what is the timebox for the daily Scrum Meeting?',
+    question: 'what is the time box for the daily Scrum Meeting?',
     choice1: 'As long as necessary',
     choice2: '15 minutes',
     choice3: '5 minutes',
@@ -104,7 +106,7 @@ let questions = [
     choice1: 'About 10 people',
     choice2: 'About 6 people',
     choice3: '10 plus or minus 3, or more if the team is geographically dispersed',
-    choice4: 'it dosent matter, as long as the team is cross functional',
+    choice4: 'it does not matter, as long as the team is cross functional',
     answer: 2,
   },
   {
@@ -221,7 +223,7 @@ let questions = [
   },
   {
     question: 'Should the team expect to know all the tasks necessary to complete the committed PBIs during the Sprint Planning Meeting?',
-    choice1: 'No, According to Agile Project Management with Scrum(Schwabber 2004), only 60% of the tasks are likely to be identified during the Sprint Planning Meeting. Other tasks, such as unanticipated dependencies, will be discovered during Sprint Execution',
+    choice1: 'No, According to Agile Project Management with Scrum (Schwabber 2004), only 60% of the tasks are likely to be identified during the Sprint Planning Meeting. Other tasks, such as unanticipated dependencies, will be discovered during Sprint Execution',
     choice2: 'Yes, the most important thing is to make sure everyone is busy every hour of the entire Sprint',
     choice3: '',
     choice4: '',
@@ -244,7 +246,7 @@ let questions = [
     answer: 1,
   },
   {
-    question: 'A 30-day Sprint uses a 1-day timebox for the Sprint Planning Meeting. How long (at most) should the Sprint Planning Meeting be for a two-week Sprint?',
+    question: 'A 30-day Sprint uses a 1-day time box for the Sprint Planning Meeting. How long (at most) should the Sprint Planning Meeting be for a two-week Sprint?',
     choice1: '15 minutes max',
     choice2: '1 hour max',
     choice3: '1 day max',
@@ -293,8 +295,6 @@ let questions = [
   }
 ]
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 20
 
 gameStart = () => {
   questionsCounter = 0
@@ -306,8 +306,7 @@ gameStart = () => {
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionsCounter > MAX_QUESTIONS) {
     localStorage.setItem('mostRecentScore', score)
-
-    return window.location.assign('/end.html')
+    return window.location.assign('end.html')
   }
   questionsCounter++
 
@@ -323,7 +322,6 @@ getNewQuestion = () => {
   })
 
   availableQuestions.splice(questionsIndex, 1)
-
   acceptingAnswers = true
 }
 
